@@ -18,3 +18,5 @@ I used various classification models for a baseline comparison. Below are the me
 <img width="686" alt="image" src="https://github.com/user-attachments/assets/a2c43bc5-f8d3-4558-b61f-8d7efb07d745">
 
 
+# Conclusion
+From the baseline comparison, DecisionTree Classifier seems to give the highest score in the shortest processing time. SVM took a long time, hence had to process using 10% random sample.
