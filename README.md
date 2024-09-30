@@ -17,10 +17,14 @@ The original data set has 466285 rows and 75 columns. Using 5% of the data broug
 
 
 # Workflow
-Exploratory Data Analysis (EDA): Initial data exploration to understand patterns, correlations, and data quality. Visualizations and summary statistics are used to gain insights into the relationships between features.
+## Exploratory Data Analysis (EDA):
+
+Initial data exploration to understand patterns, correlations, and data quality. Below is a visualizations and summary statistics of how each feature affects the target variable or final status of good or bad loan.\
+<img width="1034" alt="Screenshot 2024-09-30 085225" src="https://github.com/user-attachments/assets/093f0b42-229f-40a3-a964-4fdbc07af6fc">
+
 
 ## Data Preprocessing:
-
+The following data processing and cleanup performed on the data set
 Handling missing values\
 Removing categorical columns with too many unique values\
 Removing columns with more than 50% null values\
@@ -31,34 +35,37 @@ Balancing the dataset if necessary (e.g., using SMOTE for imbalanced classes)
 
 ## Feature Engineering:
 
+Some categorization was done to reduce unique values\
 Creating new features based on existing ones (e.g.- the binary target variable was created using the loan_status column)\
 Selecting first level of features based on the correlation matrix\
 Selecting important features using techniques like Recursive Feature Elimination (RFE) after the baseline modelling
 
-## Model Training:
+# Modeling
 
-Training multiple machine learning models on the training dataset.
-Using cross-validation to ensure robustness.
-Fine-tuning hyperparameters using GridSearchCV to optimize performance.
+## Model Training:
+The following classification models were used for baseline assessment:
+LogisticRegression, RandomForestClassifier, SVM, DecisionTreeClassifier, KNeighborsClassifier
+After baseline, fine-tuning hyperparameters was done using GridSearchCV to optimize performance.
 
 ## Model Evaluation:
 
-Models are evaluated using metrics like accuracy, precision, recall, F1-score, and AUC-ROC to assess how well the model is predicting loan defaults.
-Confusion matrices and ROC curves are used to interpret model performance.
+### Modeling Metrics and Performance
 
-## Model Selection:
+I used various classification models for a baseline comparison. For this business case I am choosing to evaluate 2 metrics: 
+### Recall and Precision
+A high Recall (True positive rate) would mean the model is able to correctly identify the borrowers who are likely to default. This is very important for a lending company as missing a borrower who will default may result in significant loss for the institution.
+The other important metric is Precision, which can measure the proportion of borrowers likely to default who actually default. A high precision would minimize false positives. Rejecting a loan to a non-defaulter may be costly for a lending company or damage customer relationship, hence this metric is important.
 
-The best-performing model is selected based on evaluation metrics.
-Feature importance and interpretability are taken into consideration.
+So overall, to get a balance between Precision and Recall, I am going for a higher F1 score. Random Forest Classifier seems to give the best result.
 
-# Modeling and Performance
+<img width="731" alt="Screenshot 2024-09-30 060733" src="https://github.com/user-attachments/assets/4a4a5a3e-b17b-499e-8cd3-49b31aa5cd6d">
 
-I used various classification models for a baseline comparison. Below are the metrics
+<img width="406" alt="Screenshot 2024-09-30 061323" src="https://github.com/user-attachments/assets/9dc5b4f6-e840-4ad5-a024-dc25ad31f9ac">
 
-<img width="420" alt="image" src="https://github.com/user-attachments/assets/53fd9ed6-a005-4bb7-9a35-4f3e05b80a6b">
+#### After Hyperparameter tuning with GridSearchCV
 
-<img width="686" alt="image" src="https://github.com/user-attachments/assets/a2c43bc5-f8d3-4558-b61f-8d7efb07d745">
+<img width="404" alt="Screenshot 2024-09-30 063516" src="https://github.com/user-attachments/assets/34328edb-490b-4f0b-9565-0a3be42dac66">
 
 
 # Conclusion
-From the baseline comparison, DecisionTree Classifier seems to give the highest score in the shortest processing time. SVM took a long time, hence had to process using 10% random sample.
+Over all, before and after hyperparameter tuning, RandomForestClassifier seems to give the best result.
