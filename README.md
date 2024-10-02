@@ -13,7 +13,7 @@ This tool can assist in reducing loan defaults, improving loan approval decision
 
 # Data
 The data set used is available [here](https://github.com/mimibhatt/Capstone_Project/tree/main/Data).  It contains lending information for borrowers of different credit plans and whether the borrower paid or defaulted.\
-The original data set has 466285 rows and 75 columns. Using 5% of the data brought it down to 23314 rows and 75 columns. After data cleansing and feature engineering, the final data set contained 11971 rows and 21 columns.
+The original data set has 466285 rows and 75 columns. Due to computational challenges, using 5% of the original data to being with which is 23314 rows and 75 columns. After data cleansing and feature engineering, the final data set contained 11971 rows and 21 columns.
 
 
 # Workflow
