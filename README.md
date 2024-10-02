@@ -12,7 +12,7 @@ Non-default: The borrower is likely to repay the loan.
 This tool can assist in reducing loan defaults, improving loan approval decisions, and optimizing financial risk management.
 
 # Data
-The data set used is available [here](https://www.kaggle.com/datasets/bytadit/bank-loan-dataset-2014-2017).  It contains lending information for borrowers of different credit plans and whether the borrower paid or defaulted.\
+The data set used is available [here]((https://github.com/mimibhatt/Capstone_Project/tree/main/Data)).  It contains lending information for borrowers of different credit plans and whether the borrower paid or defaulted.\
 The original data set has 466285 rows and 75 columns. Using 5% of the data brought it down to 23314 rows and 75 columns. After data cleansing and feature engineering, the final data set contained 11971 rows and 21 columns.
 
 
