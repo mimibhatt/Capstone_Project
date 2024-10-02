@@ -1,6 +1,6 @@
 # Predicting credit risk using Machine Learning
 In this project I am comparing various classification models to predict if there is a risk of default with a credit. 
-Jupiter notebook with code, experimentation, implementation is located [here]
+Jupiter notebook with code, experimentation, implementation is located [here](https://github.com/mimibhatt/Capstone_Project/blob/main/loan_analysis.ipynb)
 
 # Business Goals
 This project aims to build a machine learning model that predicts the likelihood of a borrower defaulting on a loan. The model will help lending institutions assess the risk of potential borrowers and make informed lending decisions. By analyzing borrower data and their financial history, the model will classify borrowers into two categories:
