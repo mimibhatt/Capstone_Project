@@ -83,4 +83,4 @@ RandomForestClassifier seems to give the best result with respect to Precision a
 ## Feature Monitoring
 Debt-to-income ratio, credit score, and payment history are the most critical factors in determining loan default risk. It is recommended that the company closely monitor these factors when approving loans
 ## Handling Imbalanced Data
-Since default loans are less frequent, using techniques like SMOTE to handle class imbalance in future datasets is recommended if the model performance decreases
+Since default loans are less frequent, using techniques like SMOTE to handle class imbalance in future datasets is recommended if the model performance decreases.
