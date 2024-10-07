@@ -44,7 +44,7 @@ Selecting important features using techniques like Recursive Feature Elimination
 
 ## Model Training:
 The following classification models were used for baseline assessment:
-LogisticRegression, RandomForestClassifier, SVM, DecisionTreeClassifier, KNeighborsClassifier
+LogisticRegression, RandomForestClassifier, SVM, DecisionTreeClassifier, KNeighborsClassifier.
 After baseline, fine-tuning hyperparameters was done using GridSearchCV to optimize performance.
 
 ## Model Evaluation:
